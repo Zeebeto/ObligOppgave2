@@ -1,0 +1,4 @@
+CSS stroke SVG: https://css-tricks.com/click-svg-to-focus/
+array funksjoner: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
+add class: https://www.w3schools.com/howto/howto_js_add_class.asp
+parseint : https://www.tutorialspoint.com/how-to-convert-a-string-into-integer-in-javascript

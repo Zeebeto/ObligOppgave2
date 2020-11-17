@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.11.3.css">
+    <script src="https://code.jquery.com/qunit/qunit-2.11.3.js"></script>
+    <script src="./controllertest.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="qunit"></div>
+    <div id="qunit-fixture"></div>
+    <script>
+        let numbers;
+        let chosenBar;
+        let inputValue;
+        let stroke;
+        let enabledButton;
+        let errormld;
+        //dummy model
+
+        function show(){ }
+        //dummy view
+        QUnit.test('sjekk valgt stolpe ', function(assert) {
+            chooseBar(5)
+            let actual = chosenBar;
+            let expected = 5;
+            assert.deepEqual(actual, expected);
+          });
+
+          QUnit.test('sjekk ikke valgt stolpe ', function(assert) {
+            chooseBar(null)
+            let actual = chosenBar;
+            let expected = null;
+            assert.deepEqual(actual, expected);
+          });
+
+          QUnit.test('sjekk valgt stolpe slettes', function(assert) {
+            numbers = [7, 3, 1, 5, 8]
+            chosenBar = 1;
+            delBar()
+            let actual = numbers;
+            let expected = [3, 1, 5, 8];
+            assert.deepEqual(actual, expected);
+          });
+
+          QUnit.test('sjekk at stolpe blir lagt til', function(assert) {
+            numbers = [7, 3, 1, 5, 8]
+            inputValue = 5
+            createNewBar()
+            let actual = numbers;
+            let expected = [7, 3, 1, 5, 8, 5];
+            assert.deepEqual(actual, expected);
+          });
+
+          QUnit.test('sjekk at stolpe endres', function(assert) {
+            numbers = [7, 3, 1, 5, 8]
+            chosenBar = 1
+            inputValue = 5
+            changeBar()
+            let actual = numbers;
+            let expected = [5, 3, 1, 5, 8,];
+            assert.deepEqual(actual, expected);
+          });
+
+      </script>
+      
+</body>
+</html>

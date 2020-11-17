@@ -1,0 +1,9 @@
+body {
+    background-color: rgb(100, 100, 100);
+}
+#valgtStolpe {
+    color: white;
+}
+#error{
+    color: red;
+}
