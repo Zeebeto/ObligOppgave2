@@ -2,3 +2,12 @@ CSS stroke SVG: https://css-tricks.com/click-svg-to-focus/
 array funksjoner: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
 add class: https://www.w3schools.com/howto/howto_js_add_class.asp
 parseint : https://www.tutorialspoint.com/how-to-convert-a-string-into-integer-in-javascript
+
+
+tilbakemelding fra joakim:
+Hei det er mulig å legge inn verdier som er under 0 , dette må fikses :) done
+Småting det går ann å rette på er: at den viser null når det ikke er valgt en stolpe, 
+kan stå ingen valgt stolpe eller bare blankt("")
+Input verdien blir ikke visket ut når du velger en ny stolpe, 
+slik at hvis du har selecta en stolpe og endret på den, 
+kan du klikke på en ny stolpe og trykke på endre knappen og den endrer seg til den verdien du la inn før.  

@@ -61,18 +61,20 @@
      chosenBar = barNo === chosenBar ? null : barNo;
      if(chosenBar === null){
          enabledButton = 'disabled';
+         chosenBar = 'du har ikke valgt en stolpe';
          errormld = '';
      } else{
          enabledButton = '';
          errormld = '';
+         inputValue = '';
      }
 
      show();
  }
  function changeBar(){
-     if(inputValue > 10){
-         errormld = 'TALL ER STØRRE EN 10'
-     } else {
+     if(inputValue > 10 || inputValue < 1 || isNaN(inputValue)){
+         errormld = 'TALL ER IKKE MELLOM 1 OG 10 ELLER ET GYLDIG TEGN!'
+     }  else {
          numbers.splice(chosenBar -1, 1, parseInt(inputValue))
          errormld = '';
      }
@@ -82,12 +84,13 @@
 
  function delBar(){
     numbers.splice(chosenBar -1, 1)
+    chosenBar = 'du har ikke valgt en stolpe';
     show()
  }
 
  function createNewBar(){
-    if(inputValue > 10){
-        errormld = 'TALL ER STØRRE EN 10'
+    if(inputValue > 10 || inputValue < 1 || isNaN(inputValue)){
+        errormld = 'TALL ER IKKE MELLOM 1 OG 10 ELLER ET GYLDIG TEGN!'
     } else {
     numbers.push(inputValue);
     errormld = '';
