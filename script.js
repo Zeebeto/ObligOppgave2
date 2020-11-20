@@ -85,6 +85,7 @@
  function delBar(){
     numbers.splice(chosenBar -1, 1)
     chosenBar = 'du har ikke valgt en stolpe';
+    enabledButton = 'disabled';
     show()
  }
 
